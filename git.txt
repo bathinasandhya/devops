@@ -1,0 +1,66 @@
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (sandy)
+$ git checkout -b maanvith
+Switched to a new branch 'maanvith'
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (maanvith)
+$ git branch
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (maanvith)
+$ git branch master
+fatal: Not a valid object name: 'maanvith'.
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (maanvith)
+$ git checkout -b master
+Switched to a new branch 'master'
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/user/Desktop/.git/
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (master)
+$ git config user.name venky
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (master)
+$ git config user.name "venky"
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (master)
+$ git config user.name
+venky
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/user/Desktop/.git/
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (master)
+$ git add .
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (master)
+$ git commit
+[master (root-commit) 6925ec5] : :wq lease enter the commit message for your changes. Lines starting
+ 24 files changed, 1261 insertions(+)
+ create mode 100644 Docker Desktop.lnk
+ create mode 100644 KMPlayer.lnk
+ create mode 100644 Visual Studio Code.lnk
+ create mode 100644 courgette.log
+ create mode 100644 desktop.ini
+ create mode 160000 devopssre
+ create mode 100644 kubernetes/pod.yaml
+ create mode 160000 myfreshproject
+ create mode 100644 newtask/bb.txt
+ create mode 100644 newtask/docker.txt
+ create mode 100644 newtask/dockerhub.png
+ create mode 100644 newtask/github.png
+ create mode 100644 newtask/kubernets.txt
+ create mode 100644 newtask/linkex.png
+ create mode 100644 newtask/linkex1.png
+ create mode 100644 newtask/linkex2.png
+ create mode 100644 newtask/linuxandpython.txt
+ create mode 100644 newtask/linuxtweet1.png
+ create mode 100644 newtask/linuxtweet2.png
+ create mode 100644 newtask/mysql.png
+ create mode 100644 newtask/pod.txt
+ create mode 100644 newtask/python.txt
+ create mode 100644 newtask/shellscripting.txt
+ create mode 100644 newtask/tocken.png
+
+user@DESKTOP-VS7O4OL MINGW64 ~/desktop (master)
