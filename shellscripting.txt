@@ -1,0 +1,167 @@
+root@DESKTOP-VS7O4OL:~# echo $SHELL
+/bin/bash
+root@DESKTOP-VS7O4OL:~# #!/bin/bash
+root@DESKTOP-VS7O4OL:~# echo hello world
+hello world
+root@DESKTOP-VS7O4OL:~# touch myfl.txt
+root@DESKTOP-VS7O4OL:~# ls
+ 1            abcinflex   demo.sh      folder4    helloscript.sh   is              myfilewithvars.sh   odd.sh       readdata.sh   sandhya.sh      sunny.txt   zing
+ 1.core       args.sh    'demo1.sh '   frnds.sh   ifelse.sh        madhuri         myfl.txt            oddeven.sh   readfile.sh   sandy           system
+ Linux        args.txt    folder       fruit.sh   initialgalaxy    multiple.sh     myinfo.txt          of           sambi         shell.sh        temp
+ abcimplex    bathina     folder1      gowri      initialzing      mycommands.sh   nani.sh             operating    san.sh        simplefile.sh   yashi.txt
+ abcimplex1   bootcamp    folder3      hashmum    input.txt        mydata.sh       nanos.txt           parentfld    sandhya       suguna.txt      yasn.sh
+root@DESKTOP-VS7O4OL:~# nano myfl.txt
+root@DESKTOP-VS7O4OL:~# chmod 774 myfl.txt
+root@DESKTOP-VS7O4OL:~# ./ myfl.txt
+-bash: ./: Is a directory
+root@DESKTOP-VS7O4OL:~# ./myfl.txt
+welcome to shell scripting
+ 1            abcinflex   demo.sh      folder4    helloscript.sh   is              myfilewithvars.sh   odd.sh       readdata.sh   sandhya.sh      sunny.txt   zing
+ 1.core       args.sh    'demo1.sh '   frnds.sh   ifelse.sh        madhuri         myfl.txt            oddeven.sh   readfile.sh   sandy           system
+ Linux        args.txt    folder       fruit.sh   initialgalaxy    multiple.sh     myinfo.txt          of           sambi         shell.sh        temp
+ abcimplex    bathina     folder1      gowri      initialzing      mycommands.sh   nani.sh             operating    san.sh        simplefile.sh   yashi.txt
+ abcimplex1   bootcamp    folder3      hashmum    input.txt        mydata.sh       nanos.txt           parentfld    sandhya       suguna.txt      yasn.sh
+the last of directories
+./myfl.txt: line 5: sandhya: command not found
+./myfl.txt: line 6: banglore: command not found
+
+root@DESKTOP-VS7O4OL:~# cat myfl.txt
+#!/bin/bash
+echo "welcome to shell scripting"
+ls
+echo "the last of directories"
+name= sandhya
+city= banglore
+echo "$name $city"
+
+root@DESKTOP-VS7O4OL:~# nano
+root@DESKTOP-VS7O4OL:~# cat nano1.txt
+#!/bin/bash
+echo what is ur name :
+read name
+echo what is ur location :
+read location
+echo what is ur state :
+
+root@DESKTOP-VS7O4OL:~# chmod 774 nano1.txt
+root@DESKTOP-VS7O4OL:~# ./nano1.txt
+what is ur name :
+sandhya
+what is ur location :
+kerala
+what is ur state :
+root@DESKTOP-VS7O4OL:~# ls -l nano1.txt
+-rwxrwxr-- 1 root root 111 Jan 20 12:32 nano1.txt
+root@DESKTOP-VS7O4OL:~# nano shell.sh
+root@DESKTOP-VS7O4OL:~# ./shell.sh 10 20 30 40 50
+-bash: ./shell.sh: Permission denied
+root@DESKTOP-VS7O4OL:~# chmod 774 shell.sh
+root@DESKTOP-VS7O4OL:~# ./shell.sh 10 20 30 40 50
+the script title is ./shell.sh
+the first argument is 10
+the second argument is 20
+the third argument is 30
+the fourth argument is 40
+/$ 4248 is the PID of the script
+/# the total number of parameters in the script 5
+root@DESKTOP-VS7O4OL:~# nano decision.sh
+root@DESKTOP-VS7O4OL:~# chmod 774 decision.sh
+root@DESKTOP-VS7O4OL:~# ./decision.sh
+enter a pet animal
+dog
+i like dog
+root@DESKTOP-VS7O4OL:~# ./decision.sh
+caenter a pet animal
+cat
+i can like any animal
+root@DESKTOP-VS7O4OL:~# ./decision.sh
+enter a pet animal
+cat
+i like cat
+root@DESKTOP-VS7O4OL:~# cat decision.sh
+#!/bin/bash
+echo "enter a pet animal"
+read animal
+if [ $animal = cat ]
+        then echo "i like cat"
+elif [ $animal = cow ]
+        then echo "i like cow"
+elif [ $animal = dog ]
+        then echo "i like dog"
+        else echo "i can like any animal"
+fi
+
+root@DESKTOP-VS7O4OL:~# nano loop.sh
+root@DESKTOP-VS7O4OL:~# chmod 774 loop.sh
+root@DESKTOP-VS7O4OL:~# ./loop.sh
+./loop.sh: line 2: syntax error: arithmetic expression required
+./loop.sh: line 2: syntax error: `((c=1:c<5:c++))'
+root@DESKTOP-VS7O4OL:~# nano loop.sh
+root@DESKTOP-VS7O4OL:~# ./loop.sh
+enter some no
+223
+welcome 1 time 223
+enter some no
+678
+welcome 2 time 678
+enter some no
+789
+welcome 3 time 789
+enter some no
+8987
+welcome 4 time 8987
+root@DESKTOP-VS7O4OL:~# cat loop.sh
+#!/bin/bash
+for((c=1; c<5; c++))
+do
+        echo "enter some no"
+        read no
+        echo "welcome $c time $no"
+done
+root@DESKTOP-VS7O4OL:~# nano whil.sh
+root@DESKTOP-VS7O4OL:~# chmod 774 whil.sh
+root@DESKTOP-VS7O4OL:~# ./whil.sh
+demo of while loop
+no is 1
+no is 2
+no is 3
+no is 4
+root@DESKTOP-VS7O4OL:~# cat whil.sh
+#!/bin/bash
+echo "demo of while loop"
+no=1
+while((no < 5))
+        do
+                echo "no is $no"
+                ((no++))
+        done
+root@DESKTOP-VS7O4OL:~# nano hello.sh
+root@DESKTOP-VS7O4OL:~# chmod hello.sh
+chmod: missing operand after ‘hello.sh’
+Try 'chmod --help' for more information.
+root@DESKTOP-VS7O4OL:~# chmod 774 hello.sh
+root@DESKTOP-VS7O4OL:~# ./hello.sh
+function with argument demo
+hi,
+hello,
+root@DESKTOP-VS7O4OL:~# cat hello.sh
+hellofunc(){
+        echo "function with argument demo"
+        echo "hi, $1"
+        echo "hello, $2"
+}
+hellofunc $1 $2
+root@DESKTOP-VS7O4OL:~# sudo apt update
+Hit:1 http://ppa.launchpad.net/ansible/ansible/ubuntu focal InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Get:5 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1509 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [893 kB]
+Fetched 2737 kB in 11s (258 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+All packages are up to date.
+root@DESKTOP-VS7O4OL:~#

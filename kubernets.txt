@@ -1,0 +1,14 @@
+PS C:\Users\user\desktop\kubern1> kubectl apply -f bb.yaml
+deployment.apps/bb-demo configured
+service/bb-entrypoint unchanged
+PS C:\Users\user\desktop\kubern1> kubectl get deployments
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+bb-demo   0/1     1            0           57m
+PS C:\Users\user\desktop\kubern1> kubectl get deployments
+NAME      READY   UP-TO-DATE   AVAILABLE   AGE
+bb-demo   1/1     1            1           57m
+PS C:\Users\user\desktop\kubern1> kubectl get services
+NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+bb-entrypoint   NodePort    10.101.251.201   <none>        3000:30001/TCP   57m
+kubernetes      ClusterIP   10.96.0.1        <none>        443/TCP          19h
+PS C:\Users\user\desktop\kubern1>
